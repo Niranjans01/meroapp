@@ -4,6 +4,7 @@
     Author     : NiranjanKrSubedi
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,5 +14,12 @@
     </head>
     <body>
         <h1>Hello World! ${user}</h1>
+        <c:forEach var="d" items="${department}">
+        <ul>
+            <li>
+                ${d.name}
+            </li>
+        </ul>
+        </c:forEach>
     </body>
 </html>
